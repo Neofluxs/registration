@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  first_name: MyString
+  middle_name: MyString
+  last_name: MyString
+  name_on_certificate: MyString
+  paid: false
+  accomodation_request: false
+  event_id: 1
+
+two:
+  user_id: 1
+  first_name: MyString
+  middle_name: MyString
+  last_name: MyString
+  name_on_certificate: MyString
+  paid: false
+  accomodation_request: false
+  event_id: 1
