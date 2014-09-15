@@ -1,0 +1,16 @@
+<%= form_for @attender, url: {actio: "create"}do |f|%>
+  <%= f.label :first_name%> <br>
+  <%= f.text_field :frst_name%> <br>
+  <%= f.label :middle_name%> <br>
+  <%= f.text_field :middle_name%> <br>
+  <%= f.label :last_name%> <br>
+  <%= f.text_field :last_name%> <br>
+  <%= f.label :name_on_certificate%> <br>
+  <%= f.text_field :name_on_certificate%> <br>
+  <%= f.label :accomodation_request%> <br>
+  <%= f.check_box :accomodation_request%> <br>
+  <%= f.label :event_id, "Event"%> <br>
+  <%= f.select :event_id, Event.all.collect {|x| [x.name, x.id] }%> <br>
+  <%= f.submit "Register"%>
+<%end%>
+

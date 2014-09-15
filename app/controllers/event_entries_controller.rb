@@ -1,5 +1,8 @@
 class EventEntriesController < ApplicationController
   before_action :require_user
+  def index
+    @evententry = EventEntry.all
+  end
   def new
     @evententry = EventEntry.new
   end
@@ -10,6 +13,9 @@ class EventEntriesController < ApplicationController
       else
         render :new
       end
+  end
+  def edit
+    @evententry = EventEntry.find(params[:id])
   end
   def evententry_params
     params.require(:evententry).permit(:first_name, :middle_name, :last_name, :name_on_certificate, :accomodation, :paid)

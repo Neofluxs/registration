@@ -1,0 +1,21 @@
+<h1>Your Registrations</h1>
+<%= @evententry.each do |entry|%>
+  <div>
+    <%= entry.first_name%>
+    <%= entry.middle_name%>
+    <%= entry.last_name%>
+    <%= entry.name_on_certificate%>
+    <% if entry.paid%>
+      Paid
+      <%else%>
+        Payment not received
+      <%end%>
+      <% if entry.accomodation_request%>
+        Accomodation Requested
+      <%else%>
+        No Accomodation requested
+      <%end%>
+    </div>
+  <%end%>
+  <hr/>
+
