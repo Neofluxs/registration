@@ -1,0 +1,5 @@
+<h1> Listing events </h1>
+<% @events.each do |event|%>
+  <h4> <%=event.name%> </h4>
+  <small> <%= event.date.strftime("%d, %b, %Y at %H:%M")%> | <%= event.venue%> | <%= link_to event, "More Info"%></small>
+<%end%>
