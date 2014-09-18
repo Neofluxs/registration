@@ -11,7 +11,7 @@
     <%= content_tag :div, v, class: "flash #{k}"%>
   <%end%>
   <%if current_user%>
-    <h4> currrently logged in as <%=current_user.first_name%> <%=current_user.last_name%> | <%= link_to "Sign out", user_session_path(current_user)%> </h4>
+    <h4> currrently logged in as <%=current_user.first_name%> <%=current_user.last_name%> | <%= link_to "Sign out", logout_path, method: :delete%> </h4>
   <%else%>
     <%= link_to "Sign in", new_user_session_path%> | <%= link_to "Sign up", new_user_path%>
   <%end%>

@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   get 'user_sessions/new'
 
   get 'user_sessions/create'
-
+  delete "/logout" => "user_sessions#destroy", as: :logout
   resources :users
-  resources :user_sessions , only: [ :create, :new, :destroy]
+  resources :user_sessions , only: [ :create, :new]
   resources :event_entries,  only: [:edit, :create, :new, :index]
   resources :events, only: [:show, :index]
   # The priority is based upon order of creation: first created -> highest priority.
