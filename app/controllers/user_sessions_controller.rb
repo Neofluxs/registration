@@ -13,4 +13,7 @@ class UserSessionsController < ApplicationController
        flash[:error] = "Login Unsucessful, please check your email and/or password"
     end
     end
+  def destroy
+    session[:user_id] = nil
+  end
 end

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'user_sessions/create'
 
   resources :users
-  resources :user_sessions , only: [ :create, :new]
+  resources :user_sessions , only: [ :create, :new, :destroy]
   resources :event_entries,  only: [:edit, :create, :new, :index]
   resources :events, only: [:show, :index]
   # The priority is based upon order of creation: first created -> highest priority.

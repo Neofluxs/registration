@@ -18,6 +18,6 @@ class EventEntriesController < ApplicationController
     @evententry = EventEntry.find(params[:id])
   end
   def evententry_params
-    params.require(:event_entry).permit(:first_name, :middle_name, :last_name, :name_on_certificate, :accomodation, :paid)
+    params.require(:event_entry).permit(:first_name, :middle_name, :last_name, :name_on_certificate, :accomodation, :paid, :event_id)
   end
 end
