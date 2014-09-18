@@ -1,4 +1,4 @@
-task :fake => environment do
+task :fake => :environment do
   10.times do
     Event.create(
       name: Faker::Commerce.product_name,
