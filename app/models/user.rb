@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :event_entries
+  has_many :events ,through: :event_entries
   has_secure_password
   validates :email, presence: true,
                      uniqueness: true,

@@ -7,6 +7,13 @@ Rails.application.routes.draw do
   resources :user_sessions , only: [ :create, :new]
   resources :event_entries,  only: [:edit, :create, :new, :index]
   resources :events, only: [:show, :index]
+  #resources :events do
+   #r resources :event_entries do
+   #r   member do
+     #r   patch :complete
+     #r end
+    #rend
+  #rnd
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

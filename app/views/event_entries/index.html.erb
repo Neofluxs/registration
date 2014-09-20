@@ -1,22 +1,24 @@
-<h1>Your Registrations</h1>
-<%= @evententry.each do |entry|%>
-  <div>
-    <ul>
-      <li><%= entry.first_name%></li>
-      <li><%= entry.middle_name%></li>
-      <li><%= entry.last_name%></li>
-      <li><%= entry.name_on_certificate%></li>
-    <% if entry.paid%>
-      <li>Paid</li>
-      <%else%>
-        <li>payment not received</li>
-      <%end%>
-      <% if entry.accomodation_request%>
-        <li>accomodation Requested</li>
-      <%else%>
-        <li>No Accomodation requested</li>
-      <%end%>
-    </div>
-    <hr>
+<h1>Your registrations </h1>
+<div> <%= link_to "Events List", root_path%>| <%= link_to "Register to an event", new_event_entry_path%>
+</div>
+<% @evententry.each do |entry|%>
+  <%= entry.first_name%>
+  <%= entry.middle_name%>
+  <%= entry.last_name%>
+  </br>
+  <%= entry.name_on_certificate%>
+  </br>
+  <% if entry.paid%>
+    Paid
+  <%else%>
+    Payment not received
   <%end%>
-
+  <% if entry.accomodation_request%>
+    Accomodation requested
+  <%else%>
+    Accomodation not requested
+  <%end%>
+  </br>
+  
+  <hr>
+<%end%>
