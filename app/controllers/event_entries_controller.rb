@@ -1,8 +1,8 @@
 class EventEntriesController < ApplicationController
   before_action :require_user
   def index
-    @evententry = current_user.event_entries.all
-    @event = current_user.events.all
+    @evententry = current_user.event_entries
+    @event = current_user.events
   end
   def new
     @evententry = EventEntry.new
